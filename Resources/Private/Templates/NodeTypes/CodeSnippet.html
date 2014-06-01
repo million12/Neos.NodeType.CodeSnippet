@@ -1,0 +1,10 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+	<f:if condition="{showTitle}">
+		<h5 class="code-title">{neos:contentElement.editable(property: 'title')}</h5>
+	</f:if>
+	<f:if condition="{language}">
+		<h5 class="code-language">{language}</h5>
+	</f:if>
+	<pre><code>{source -> f:format.raw()}</code></pre>
+</div>

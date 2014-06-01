@@ -1,0 +1,13 @@
+{
+	"name": "m12/neos-nodetype-codesnippet",
+	"type": "typo3-flow-package",
+	"description": "A node type for adding code snippets",
+	"require": {
+		"typo3/neos-nodetypes": "*"
+	},
+	"autoload": {
+		"psr-0": {
+			"M12\\Neos\\NodeType\\CodeSnippet": "Classes"
+		}
+	}
+}

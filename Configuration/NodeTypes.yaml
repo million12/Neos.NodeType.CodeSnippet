@@ -1,0 +1,59 @@
+'M12.Neos.NodeType.CodeSnippet:CodeSnippet':
+  superTypes: ['TYPO3.Neos:Content']
+  ui:
+    icon: 'icon-code'
+    label: 'Code Snippet (M12)'
+    inspector:
+      groups:
+        codeSnippet:
+          label: 'Code Snippet'
+          position: 10
+  properties:
+    showTitle:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: 'Show title'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'codeSnippet'
+    title:
+      type: string
+      defaultValue: 'Code:'
+      ui:
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'codeSnippet'
+    source:
+      type: string
+      ui:
+        label: 'Snippet Content'
+        inspector:
+          group: 'codeSnippet'
+          editor: 'TYPO3.Neos/Inspector/Editors/HtmlEditor'
+      defaultValue: '// Enter your code here'
+    language:
+      type: string
+      defaultValue: ''
+      ui:
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'codeSnippet'
+          editor: 'Content/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: 'Plain Text'
+              'javascript':
+                label: 'JavaScript'
+              'text/css':
+                label: 'CSS'
+              'text/html':
+                label: 'HTML'
+              'text/x-php':
+                label: 'PHP'
+              'text/x-yaml':
+                label: 'YAML'
+              'text/typoscript2':
+                label: 'TypoScript2'
