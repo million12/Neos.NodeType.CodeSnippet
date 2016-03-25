@@ -27,12 +27,15 @@
           group: 'codeSnippet'
     source:
       type: string
+      defaultValue: '// Enter your code here'
       ui:
         label: 'Snippet Content'
         inspector:
           group: 'codeSnippet'
-          editor: 'TYPO3.Neos/Inspector/Editors/HtmlEditor'
-      defaultValue: '// Enter your code here'
+          editor: 'TYPO3.Neos/Inspector/Editors/CodeEditor'
+          editorOptions:
+            label: 'Edit code'
+            highlightingMode: 'text/javascript'
     language:
       type: string
       defaultValue: ''
