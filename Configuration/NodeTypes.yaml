@@ -9,14 +9,6 @@
           label: 'Code Snippet'
           position: 10
   properties:
-    showTitle:
-      type: boolean
-      defaultValue: TRUE
-      ui:
-        label: 'Show title'
-        reloadIfChanged: TRUE
-        inspector:
-          group: 'codeSnippet'
     title:
       type: string
       defaultValue: 'Code:'
@@ -25,38 +17,101 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'codeSnippet'
+          position: 10
+    showTitle:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: 'Display title'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'codeSnippet'
+          position: 11
     source:
       type: string
       defaultValue: '// Enter your code here'
       ui:
-        label: 'Snippet Content'
+        label: 'Code'
         inspector:
           group: 'codeSnippet'
+          position: 20
           editor: 'TYPO3.Neos/Inspector/Editors/CodeEditor'
           editorOptions:
             label: 'Edit code'
             highlightingMode: 'text/javascript'
     language:
       type: string
-      defaultValue: ''
       ui:
+        label: 'Syntax highlighting'
         reloadIfChanged: TRUE
         inspector:
           group: 'codeSnippet'
+          position: 30
           editor: 'Content/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
               '':
                 label: 'Plain Text'
+              'shell':
+                label: 'Bash shell'
+              'clike':
+                label: 'C, C++, C#, Java'
+              'coffeescript':
+                label: 'CoffeeScript'
+              'css':
+                label: 'CSS, SCSS'
               'javascript':
                 label: 'JavaScript'
-              'text/css':
-                label: 'CSS'
-              'text/html':
+              'diff':
+                label: 'Diff'
+              'erlang':
+                label: 'Erlang'
+              'go':
+                label: 'Go lang'
+              'groovy':
+                label: 'Groovy'
+              'htmlembedded':
+                label: 'ASP.NET'
+              'htmlmixed':
                 label: 'HTML'
-              'text/x-php':
+              'http':
+                label: 'HTTP'
+              'javascript':
+                label: 'JavaScript, JSON, TypeScript'
+              'less':
+                label: 'Less'
+              'livescript':
+                label: 'LiveScript'
+              'markdown':
+                label: 'Markdown'
+              'nginx':
+                label: 'Nginx'
+              'perl':
+                label: 'Perl'
+              'PHP':
                 label: 'PHP'
-              'text/x-yaml':
+              'python':
+                label: 'Python'
+              'rst':
+                label: 'reStructuredText'
+              'ruby':
+                label: 'Ruby'
+              'sass':
+                label: 'Sass'
+              'sql':
+                label: 'SQL'
+              'toml':
+                label: 'TOML'
+              'xml':
+                label: 'XML'
+              'yaml':
                 label: 'YAML'
-              'text/typoscript2':
-                label: 'TypoScript2'
+    showLanguage:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: 'Display syntax name'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'codeSnippet'
+          position: 31

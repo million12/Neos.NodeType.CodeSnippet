@@ -1,0 +1,5 @@
+prototype(M12.Neos.NodeType.CodeSnippet:CodeSnippet) < prototype(TYPO3.Neos:Content) {
+	attributes.class.nodeType = 'm12-codesnippet'
+
+	showBar = ${q(node).property('showTitle') || q(node).property('showLanguage') ? true : false}
+}

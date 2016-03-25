@@ -1,10 +1,14 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 <div{attributes -> f:format.raw()}>
-	<f:if condition="{showTitle}">
-		<h5 class="code-title">{neos:contentElement.editable(property: 'title')}</h5>
-	</f:if>
-	<f:if condition="{language}">
-		<h5 class="code-language">{language}</h5>
+	<f:if condition="{showBar}">
+		<div class="m12-codesnippet__bar">
+			<f:if condition="{showTitle}">
+				<h5 class="m12-codesnippet__title">{neos:contentElement.editable(property: 'title')}</h5>
+			</f:if>
+			<f:if condition="{showLanguage}">
+				<h5 class="m12-codesnippet__language">{language}</h5>
+			</f:if>
+		</div>
 	</f:if>
 	<pre><code>{source -> f:format.raw()}</code></pre>
 </div>
